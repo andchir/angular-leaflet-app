@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="mapsapp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps App</title>
+    
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css" />
+    
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/leaflet/dist/leaflet.js"></script>
+    <script src="node_modules/leaflet-plugins/layer/Marker.Rotate.js"></script>
+    <script src="node_modules/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
+    
+    <script src="js/app.js"></script>
+    <script src="js/controllers/mainController.js"></script>
+    <script src="js/services/randomMarkers.js"></script>
+    <script src="js/services/mapHelper.js"></script>
+    
+</head>
+<body ng-controller="mainController as main">
+
+<div class="container">
+    
+    <h1>My Map</h1>
+    
+    <leaflet width="100%" height="480px" center="map.place" defaults="map.defaults" markers="map.markers" paths="map.paths" controls="map.controls"></leaflet>
+    
+</div>
+
+</body>
+</html>
