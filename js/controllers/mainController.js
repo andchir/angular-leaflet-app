@@ -3,7 +3,8 @@
  * Main controller
  *
  */
-app.controller('mainController', [ '$scope', 'leafletData', 'randomMarkersService', 'mapHelperService', function($scope, leafletData, randomMarkersService, mapHelperService) {
+angular.module('mapsapp')
+.controller('mainController', [ '$scope', 'leafletData', 'randomMarkersService', 'mapHelperService', function($scope, leafletData, randomMarkersService, mapHelperService) {
     
     //configuration
     var MARKERS_COUNT = 3,

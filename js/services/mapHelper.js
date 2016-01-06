@@ -3,7 +3,8 @@
  * Map helper service
  *
  */
-app.service('mapHelperService', function( leafletData ) {
+angular.module('mapsapp')
+.service('mapHelperService', function( leafletData ) {
     
     var self = this;
     this._map = null;
@@ -43,7 +44,7 @@ app.service('mapHelperService', function( leafletData ) {
         return ( this.degrees( Math.atan2( dLong, dPhi ) ) + 360 ) % 360;
     };
     
-    /** Get map size distance */
+    /** Get map scale */
     this.getMapDistance = function(){
         var y = this._map.getSize().y / 2;
         return this._map.containerPointToLatLng([0, y])

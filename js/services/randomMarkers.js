@@ -3,7 +3,8 @@
  * Random markers service
  *
  */
-app.service('randomMarkersService', function( leafletData, mapHelperService ) {
+angular.module('mapsapp')
+.service('randomMarkersService', function( leafletData, mapHelperService ) {
     
     var self = this;
     this._map = null;
