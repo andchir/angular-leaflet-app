@@ -57,8 +57,8 @@ angular.module('mapsapp')
     };
     
     //Create markers
-    leafletData.getMap().then(function(m){
-        leafletMap = m;
+    leafletData.getMap().then(function(map){
+        leafletMap = map;
         mapDistance = mapHelperService.getMapDistance();
         var markers = randomMarkersService.generateMarkers( MARKERS_COUNT, defaults );
         angular.extend( $scope.map, markers );

@@ -10,8 +10,8 @@ angular.module('mapsapp')
     this._map = null;
     
     //Get map object
-    leafletData.getMap().then(function(m){
-        self._map = m;
+    leafletData.getMap().then(function(map){
+        self._map = map;
     });
     
     /**
