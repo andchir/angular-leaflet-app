@@ -30,7 +30,6 @@ angular.module('mapsapp')
             var point1 = this.getRandomPoint();
             var point2 = this.getRandomPoint();
             var angle = mapHelperService.calcAngle( point1, point2 );
-            console.log(point1, point2, angle);
             
             output.markers[ 'm' + i + '1' ] = angular.extend( {}, options.marker, point1, { iconAngle: angle } );
             output.markers[ 'm' + i + '2' ] = angular.extend( {}, options.marker, point2, { iconAngle: angle - 180 } );
